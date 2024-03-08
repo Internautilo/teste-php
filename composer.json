@@ -1,0 +1,15 @@
+{
+    "name": "yuribertulucci/teste-php",
+    "autoload": {
+        "psr-4": {
+            "App\/": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Internautilo",
+            "email": "yuribertulucci2004@gmail.com"
+        }
+    ],
+    "require": {}
+}
