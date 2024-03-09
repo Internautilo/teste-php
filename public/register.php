@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class="container">
-        <form action="" method="post">
+        <form action="<?= __DIR__."teste.php"?>" method="post">
             <p class="bold">Nome</p>
             <input type="text" name="name" id="name">
             <p class="bold">Email</p>
