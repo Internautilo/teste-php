@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-class Model
+abstract class Model
 {
     protected $connection;
     protected string $table;
