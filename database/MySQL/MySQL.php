@@ -2,7 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Database;
+namespace Database\MySQL;
+
+use Database\Database;
+use Database\DatabaseConnection;
 
 class MySQL extends Database
 {
