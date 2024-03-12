@@ -66,7 +66,7 @@ class MySQL extends Database
         return $stmt->fetch(\PDO::FETCH_ASSOC);
     }
 
-    public function store(array $data, string $intoTable): int
+    public function insert(array $data, string $intoTable): int
     {
         $table = $intoTable;
         $keys = implode(", ", array_keys($data));
