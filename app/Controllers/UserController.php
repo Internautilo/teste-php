@@ -12,6 +12,18 @@ class UserController extends UserModel
     {
     }
 
+    public function store(array $data): int
+    {
+        $this->checkFillables($data);
+
+        if (empty($array)) {
+            return throw new \Exception("Error: Error storing User in database");
+        } else {
+            $rows = $this->connection->insert($data, $this->table);
+            return $rows;
+        }
+    }
+    
     private function checkFillables(array $data): bool
     {
         foreach ($data as $dataKeys => $dataValues){
