@@ -23,6 +23,20 @@ class UserController extends UserModel
             return $rows;
         }
     }
+
+
+    public function update(array $data, string|int $id): int
+    {
+        $this->checkFillables($data);
+
+        if (empty($array)) {
+            return throw new \Exception("Error: Error storing User in database");
+        } else {
+            $where = ["id" => $id];
+            $rows = $this->connection->update($data, $where, $this->table);
+            return $rows;
+        }
+    }
     
     private function checkFillables(array $data): bool
     {
