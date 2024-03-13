@@ -37,10 +37,15 @@ class UserController extends UserModel
             return $rows;
         }
     }
-    
+
+    public function delete(string|int $id)
+    {
+        $this->connection->delete($this->table, [$this->primary_key => $id]);
+    }
+
     private function checkFillables(array $data): bool
     {
-        foreach ($data as $dataKeys => $dataValues){
+        foreach ($data as $dataKeys => $dataValues) {
             if (!in_array($dataKeys, $this->fillable)) {
                 return false;
             }
